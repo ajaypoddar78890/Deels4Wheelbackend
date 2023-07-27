@@ -36,11 +36,9 @@ const connect = async () => {
 //Routes
 app.use("/api/user", UserRoute);
 app.use("/api/review", ReveiwRoute);
-app.use("/api/order", OrderRoute);
-app.use("/api/message", MessageRoute);
+
 app.use("/api/gigs", GigRoute);
-app.use("/api/conversation", ConverSationRoute);
-app.use("/api/conversation", ConverSationRoute);
+
 app.use("/api/auth", AuthRoute);
 
 app.use((err, req, res, next) => {
