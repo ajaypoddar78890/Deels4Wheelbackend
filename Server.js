@@ -21,7 +21,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+// app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({ origin: "https://deals4wheelss.onrender.com", credentials: true })
+);
 
 //connecting to the DB
 const connect = async () => {
