@@ -22,8 +22,16 @@ app.use(express.json());
 app.use(cookieParser());
 
 // app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+
 app.use(
-  cors({ origin: "https://deals4wheelss.onrender.com", credentials: true })
+  cors({
+    origin: [
+      "https://deals4wheelss.onrender.com",
+      "https://deals4wheelss.netlify.app",
+      "http://localhost:3000",
+    ],
+    credentials: true,
+  })
 );
 
 //connecting to the DB
